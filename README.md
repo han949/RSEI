@@ -31,3 +31,6 @@
 ```math
 X_{\text{norm}} = \frac{X - X_{\min}}{X_{\max} - X_{\min}}
 
+#
+
+
