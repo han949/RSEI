@@ -1,5 +1,5 @@
+//说明：注意我这里用的是年尺度的RSEI计算，故采用的均值合成而不是中值合成
 // 导入研究区
-
 var geometry = ee.FeatureCollection("users/RaySpaniare/jiujiang");
 // 加载 Landsat 8/9 数据集
 var landsat = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')  // Landsat 8
