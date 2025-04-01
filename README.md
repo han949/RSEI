@@ -30,7 +30,7 @@
 ```math
 X_{\text{norm}} = \frac{X - X_{\min}}{X_{\max} - X_{\min}}
 ```
-# 我的代码
+# 示例代码
 
 以下是JavaScript代码示例：
 
