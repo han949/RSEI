@@ -35,8 +35,8 @@ X_{\text{norm}} = \frac{X - X_{\min}}{X_{\max} - X_{\min}}
 以下是JavaScript代码示例：
 
 ```javascript
+//说明：注意我这里用的是年尺度的RSEI计算，故采用的均值合成而不是中值合成
 // 导入研究区
-
 var geometry = ee.FeatureCollection("users/RaySpaniare/jiujiang");
 // 加载 Landsat 8/9 数据集
 var landsat = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')  // Landsat 8
@@ -177,10 +177,6 @@ function calculatePCA(image) {
     [0, 0, 0, ee.Number(ndbsiCoef).gt(0).multiply(2).subtract(1)]   // 干度系数调整
   ]);
 
-
-  
-
-
   // 调整特征向量
   var adjustedEigenVectors = eigenVectors.matrixMultiply(adjustMatrix);
   // 将调整后的特征向量转换为图像格式
@@ -296,10 +292,9 @@ Map.addLayer(rsei.clip(region), {
 }, 'RSEI');
 // 设置地图视图范围
 Map.centerObject(region, 9);
-
 // 结束
 ```
-####  本文借鉴了RaySpaniare的博客，欢迎大家进一步完善。
+###### 本文借鉴了RaySpaniare的博客，欢迎大家进一步完善。
 
 
 
