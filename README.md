@@ -30,6 +30,3 @@
 ```math
 X_{\text{norm}} = \frac{X - X_{\min}}{X_{\max} - X_{\min}}
 
-
-
-# 本文借鉴了RaySpaniare的博客，欢迎大家进一步完善。
